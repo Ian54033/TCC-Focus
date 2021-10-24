@@ -1,21 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TextInput,
+  Button,
+  TouchableOpacity,
+} from "react-native";
+
+import LoginPage from './src/components/Login/login';
+import CadastroPage from './src/components/Cadastro/cadastro';
 
 export default function App() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      // <LoginPage/>
+      <CadastroPage/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
